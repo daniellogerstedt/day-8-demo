@@ -21,7 +21,22 @@ function formData(event) {
 
   data.push(new Student(first, last, status, future));
 
-// create our table here
+  // create our table here
+
+  buildTable();
 
   form.reset();
 }
+
+function buildTable() {
+  var row;
+
+  for (var i = 0; i < data.length; i++) {
+    row = document.createElement('tr');
+    row.innerHTML = '<td>' + data[i].first + '</td>' + '<td>' + data[i].last + '</td>' + '<td>' + data[i].enrolled + '</td>' + '<td>' + data[i].future_classes + '</td>';
+  }
+
+  table.appendChild(row);
+}
+
+form.addEventListener('submit', formData);
