@@ -9,7 +9,40 @@
   </head>
   <body>
     <!-- content goes here -->
+    <form>
+      <fieldset>
+        <label for="first-name">First Name:</label>
+        <input type="text" name="first-name" placeholder="Enter First Name" required>
+      </fieldset>
+      <fieldset>
+        <label for="last-name">Last Name:</label>
+        <input type="text" name="last-name" placeholder="Enter Last Name" required>
+      </fieldset>
+      <fieldset>
+        <label for="enrolled">Currently Enrolled?</label>
+        <input type="checkbox" name="enrolled" value="enrolled">
+      </fieldset>
+      <fieldset>
+        <label for="future-classes">Interested In Future Classes?</label>
+        <input type="radio" name="future-classes" value="yes">Yes
+        <input type="radio" name="future-classes" value="no">No
+      </fieldset>
+      <button id="submit-btn" type="submit">Submit</button>
+    </form>
 
+    <section id="students">
+      <table>
+        <thead>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Currently Enrolled?</th>
+          <th>Future Classes?</th>
+        </thead>
+        <tbody id="student-table">
+          <!-- student table data dynamically generated -->
+        </tbody>
+      </table>
+    </section>
     <script src="app.js"></script>
   </body>
 </html>
